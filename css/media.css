@@ -1,0 +1,24 @@
+@media screen and (max-width: 1025px) {
+  html, body {
+    height: auto;
+  }
+  .wrapper {
+    padding: 20px;
+  }
+  .section-first {
+    height: auto;
+    background-size: auto 100%;
+  }
+  .cat-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .cat-list .cat-item {
+    width: 50%;
+    margin: 10px 0;
+  }
+}
+/*# sourceMappingURL=media.css.map */

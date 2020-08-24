@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "TrebuchetMS", serif;
+    min-height: 600px;
+}
+
+.wrapper {
+    max-width: 1120px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.section-first {
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.section-first .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-first .title {
+    text-shadow: 0 1px 0 #000000;
+    font-family: "Exo2";
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.cat-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 23px;
+    .cat-item {
+        min-width: 320px;
+        min-height: 480px;
+        position: relative;
+        user-select: none;
+        .clip-path {
+            clip-path: polygon(13% 0, 100% 0, 100% 100%, 0 100%, 0 8%);
+            width: 320px;
+            height: 480px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            border-radius: 15px;
+            &.blue {
+                background-color: #1698d9;
+                .weight {
+                    background-color: #1698d9;
+                }
+            }
+            &.red {
+                background-color: #d91667;
+                .weight {
+                    background-color: #d91667;
+                }
+            }
+            &.yellow {
+                background-color: #ffa500;
+                .weight {
+                    background-color: #ffa500;
+                }
+            }
+            &.gray {
+                background-color: #b3b3b3;
+                .weight {
+                    background-color: #b3b3b3;
+                }
+                .item-field {
+                    cursor: default;
+                    background-color: #ffffff;
+                    opacity: 0.5;
+                    &:hover {
+                        background-position: bottom;
+                        & .weight {
+                            width: 80px;
+                            height: 80px;
+                            bottom: 10px;
+                            right: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        .tick {
+            display: none;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            top: 10px;
+            right: 10px;
+            background-color: #80b200;
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 5px;
+                height: 10px;
+                top: 15%;
+                left: 30%;
+                border: solid rgb(255, 255, 255);
+                border-width: 0 3px 3px 0;
+                transform: rotate(45deg);
+            }
+        }
+        &.tick-on {
+            .tick {
+                display: block;
+            }
+        }
+    }
+    .item-field {
+        width: 310px;
+        height: calc(100% - 10px);
+        clip-path: polygon(13% 0, 100% 0, 100% 100%, 0 100%, 0 8%);
+        margin: 0 auto;
+        cursor: pointer;
+        margin: auto;
+        background-color: #f2f2f2;
+        background-image: url("../img/mr-cat.png");
+        background-position: bottom;
+        background-repeat: no-repeat;
+        position: relative;
+        border-radius: 15px;
+        color: #000000;
+        transition: 0.5s;
+
+        .item-description {
+            padding: 24px 42px;
+        }
+        .item-subtitle {
+            color: #666666;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        .item-title {
+            font-size: 48px;
+            font-weight: 700;
+        }
+        .item-food {
+            font-size: 24px;
+            font-weight: 700;
+        }
+        .item-text {
+            color: #666666;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16px;
+            margin-top: 15px;
+            span {
+                font-weight: 700;
+            }
+        }
+        .weight {
+            position: absolute;
+            color: #fff;
+            font-weight: 400;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            bottom: 10px;
+            right: 10px;
+            display: flex;
+            font-size: 21px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+            transition: 0.5s;
+            .num {
+                font-size: 40px;
+            }
+        }
+        &:hover {
+            background-position: 2px bottom;
+            & .weight {
+                bottom: 12px;
+                right: 12px;
+                width: 85px;
+                height: 85px;
+            }
+        }
+    }
+    .sub-text {
+        margin-top: 15px;
+        text-align: center;
+        text-shadow: 0 1px 0 #000000;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 16px;
+        a {
+            color: #1698d9;
+            &:link {
+                text-decoration: none;
+            }
+        }
+    }
+}
+.gold {
+    color: #ffff66;
+}
+.btn {
+    margin: 30px 0;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    background: #c673b3;
+    transition: 0.8s;
+    color: #fff;
+    &:hover {
+        background: #1698d9;
+    }
+}
+.buylist {
+    font-family: "Exo2", serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    user-select: none;
+}
