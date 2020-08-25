@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         })
         listfood.length == 0 ?
             buylist.innerHTML = 'Корзина пуста' :
-            buylist.innerHTML = `Вы купили ${listfood.join(', ')}`
+            buylist.innerHTML = `Вы купили корм ${listfood.join(', ')}`
     }
     btn.addEventListener('click', (elem) => {
         buyItems(elem)
